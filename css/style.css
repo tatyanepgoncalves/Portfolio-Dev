@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wdth,wght@0,75..125,700;1,75..125,700&family=Inconsolata&family=Maven+Pro&display=swap');
+
+:root {
+  --maven: "Maven Pro", sans-serif;
+  --inconsolata: "Inconsolata", monospace; 
+  --asap:  "Asap", sans-serif;
+
+
+  --red: #e3646e;
+  --purple: #BB72E9;
+  --blue: #3996DB;
+  --green: #82BC4F;
+  --yellow: #EABD5F;
+  --gray100: #0D0E11;
+  --gray200: #16181D;
+  --gray300: #292C34;
+  --gray400: #878EA1;
+  --gray500: #C0C4CE;
+  --gray600: #E2E4E9;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--asap);
+}
+
+.title-lg {
+  font-size: 56px;
+  line-height: 120%;
+  font-weight: bold;
+  font-family: var(--asap);
+}
+
+.title-md {
+  font-size: 24px;
+  line-height: 120%;
+  font-weight: bold;
+  font-family: var(--asap);
+}
+
+.title-sm {
+  font-size: 16px;
+  line-height: 120%;
+  font-weight: bold;
+  font-family: var(--asap);
+}
+
+.subtitle {
+  font-family: var(--inconsolata);
+  font-size: 20px;
+  line-height: 120%;
+  font-weight: normal;
+  color: var(--gray500);
+}
+
+.subtitle-span {
+  color: var(--red);
+}
+
+.text-md{
+  font-family: var(--maven);
+  font-size: 16px;
+  line-height: 140%;
+  font-weight: 400;
+}
+
+.text-sm{
+  font-family: var(--maven);
+  font-size: 14px;
+  line-height: 140%;
+  font-weight: 400;
+}
+
+body {
+  background-color: var(--gray200);
+}
+
+#app {
+  max-width: 1040px;
+  margin: 120px auto 163px;
+  border: 1px solid #ccc;
+  text-align: center;
+}

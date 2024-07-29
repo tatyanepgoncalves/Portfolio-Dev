@@ -1,0 +1,47 @@
+.services-header {
+  margin-top: 88px;
+  margin-bottom: 56px;
+}
+
+.services-header > .subtitle {
+  margin-bottom: 8px;
+  color: var(--red);
+}
+
+.services-header > .title-md {
+  color: var(--gray600);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 24px;
+  margin-bottom: 120px;
+}
+
+.card {
+  border: 2px solid var(--gray200);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+
+
+.card img {
+  width: 48px;
+  margin-bottom: 20px;
+}
+
+
+
+.card > .texto .title-sm {
+  color: var(--gray600);
+  margin-bottom: 8px;
+}
+
+.card  > .texto .text-sm{
+  color: var(--gray500);
+}

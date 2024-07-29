@@ -1,0 +1,69 @@
+
+.intro > header {
+  margin-bottom: 80px;
+}
+
+.avatar {
+  position: relative;
+  width: 112px;
+  height: 112px;
+  left: 450px;
+  margin-bottom: 56px;
+}
+
+.code img {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: 65px;
+  top: 70px;
+}
+
+.user img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 2px solid var(--red);
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.title > .subtitle {
+  margin-bottom: 8px;
+}
+
+.title > .title-lg {
+  color: var(--gray600);
+}
+
+.texto > p {
+  color: var(--gray400);
+}
+
+.tags {
+  display: flex;
+  margin-bottom: 94px;
+  column-gap: 16px;
+  justify-content: center;
+}
+
+.tag {
+  background-color: var(--gray300);
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  padding: 9px 16px;
+  border-radius: 999px;
+}
+
+
+.tag > p {
+  color: var(--gray500);
+  font-weight: 400;
+}
+
+.icon {
+  margin-bottom: 57px;
+}

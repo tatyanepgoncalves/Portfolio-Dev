@@ -1,0 +1,31 @@
+.contact-header {
+  margin: 120px 0 58px;
+}
+
+.contact-header .subtitle {
+  color: var(--purple);
+}
+
+.contact-header .title-md {
+  color: var(--gray600);
+  margin: 8px 0;
+}
+
+.contact-header .text-md {
+  color: var(--gray500);
+}
+
+.links {
+  border: 1px solid red;
+  display: grid;
+  justify-content: center;
+  gap: 16px;
+}
+
+.links button {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+  background-color: var(--gray300);
+  border: none;
+}
