@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme inline {
+  --color-background: #1f0a27;
+  --color-foreground: #b8c8da;
+  --font-space-grotesk: "Space Grotesk", sans-serif;
+  --font-noto-sans: "Noto Sans", sans-serif;
+
+  --gradient-bg: radial-gradient(
+    70.71% 70.71% at 50% 50%,
+    rgba(237, 177, 255, 0.1) 1.77%,
+    rgba(237, 177, 255, 0) 1.77%
+  );
+}
