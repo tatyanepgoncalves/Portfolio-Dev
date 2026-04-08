@@ -1,15 +1,25 @@
 import type { Metadata } from 'next'
-import { Noto_Sans, Space_Grotesk } from 'next/font/google'
+import { Poppins, Roboto, Outfit } from 'next/font/google'
 import './globals.css'
+import Image from 'next/image'
+import Header from '@/components/header'
+import Bg from '@/images/bg.png'
+import { cn } from "@/lib/utils";
 
-const notoSans = Noto_Sans({
-  variable: '--font-noto-sans',
+const robotoHeading = Roboto({subsets:['latin'],variable:'--font-heading'});
+
+const outfit = Outfit({subsets:['latin'],variable:'--font-sans'});
+
+const poppins = Poppins({
+  variable: '--font-poppins',
   subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 })
 
-const spaceGrotesk = Space_Grotesk({
-  variable: '--font-space-grotesk',
+const roboto = Roboto({
+  variable: '--font-roboto',
   subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 })
 
 export const metadata: Metadata = {
@@ -24,12 +34,18 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      className={` ${spaceGrotesk.variable} ${notoSans.variable} h-full antialiased`}
+      className={cn("flex", "h-full", "flex-col", "antialiased", roboto.variable, poppins.variable, "font-sans", outfit.variable, robotoHeading.variable)}
       lang="pt-BR"
       suppressHydrationWarning
     >
-      <body className="flex min-h-full flex-col bg-zinc-950 text-zinc-100">
-        {children}
+      <body className="relative min-h-screen w-full font-poppins">
+        <Image
+          alt="Image de fundo"
+          className="absolute inset-0 -z-10 object-cover"
+          src={Bg}
+        />
+        <Header />
+        <main>{children}</main>
       </body>
     </html>
   )
