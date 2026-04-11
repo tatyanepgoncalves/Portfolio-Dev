@@ -1,22 +1,14 @@
-import { Image } from "lucide-react"
-
 export const projects = [
   {
-    title: 'Nome 1',
-    description: 'Descrição do projeto 1',
-    preview: Image,
-    link: '#',
+    title: 'CineVNW',
+    description: 'API de catálogo de filmes e séries.',
+    preview: '/cinevnw-thumb.png', 
+    link: 'https://github.com/...',
   },
   {
-    title: 'Nome 2',
-    description: 'Descrição do projeto 2',
-    preview: Image,
-    link: '#',
-  },
-  {
-    title: 'Nome 3',
-    description: 'Descrição do projeto 3',
-    preview: Image,
-    link: '#',
+    title: 'Agape',
+    description: 'Sistema de gerenciamento de comunidade.',
+    preview: '/agape-thumb.png',
+    link: 'https://github.com/...',
   },
 ]

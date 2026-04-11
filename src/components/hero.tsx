@@ -25,8 +25,9 @@ export default function Hero() {
           <Image
             alt="Ilustração"
             className="w-full"
-            loading="lazy"
+            priority
             src={Ilustration}
+            width={100}
           />
         </picture>
       </div>

@@ -1,7 +1,7 @@
-import { Image, Link as LinkIcon } from 'lucide-react'
+import { Link as LinkIcon } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { projects } from '@/types/projects'
-import { Button } from './ui/button'
 
 export default function Projects() {
   return (
@@ -28,31 +28,32 @@ export default function Projects() {
                 </div>
 
                 <div className="flex items-center gap-2">
-                  <Button type="button" variant="default">
-                    <Link
-                      className="flex items-center justify-center gap-2"
-                      href={project.link}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <LinkIcon /> Acessar demo
-                    </Link>
-                  </Button>
+                  <Link
+                    className="flex shrink-0 items-center justify-center gap-2 rounded-lg bg-purple-600 px-4 py-2 text-primary-foreground hover:bg-purple-600/80 aria-expanded:bg-purple-600 aria-expanded:text-purple-600 [a]:hover:bg-purple-600/80"
+                    href={project.link}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <LinkIcon /> Acessar demo
+                  </Link>
 
-                  <Button type="button" variant="outline">
-                    <Link
-                      className="flex items-center justify-center gap-2"
-                      href={project.link}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <LinkIcon /> Acessar projeto
-                    </Link>
-                  </Button>
+                  <Link
+                    className="flex items-center justify-center gap-2 rounded-lg border border-border bg-background px-4 py-2 hover:border-purple-200 hover:text-white aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50"
+                    href={project.link}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <LinkIcon /> Acessar projeto
+                  </Link>
                 </div>
               </div>
               <div className="flex h-60 w-full max-w-100 items-center justify-center rounded-[12px] bg-primary md:max-w-135">
-                <Image />
+                <Image
+                  alt={project.title}
+                  className="object-cover transition-transform duration-500 hover:scale-105"
+                  fill
+                  src={project.preview}
+                />
               </div>
             </div>
           ))}
