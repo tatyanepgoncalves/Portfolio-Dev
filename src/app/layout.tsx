@@ -1,14 +1,15 @@
 import type { Metadata } from 'next'
-import { Poppins, Roboto, Outfit } from 'next/font/google'
+import { Outfit, Poppins, Roboto } from 'next/font/google'
 import './globals.css'
 import Image from 'next/image'
-import Header from '@/components/header'
+import Footer from '@/components/footer'
+import Header from '@/components/header/header'
 import Bg from '@/images/bg.png'
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils'
 
-const robotoHeading = Roboto({subsets:['latin'],variable:'--font-heading'});
+const robotoHeading = Roboto({ subsets: ['latin'], variable: '--font-heading' })
 
-const outfit = Outfit({subsets:['latin'],variable:'--font-sans'});
+const outfit = Outfit({ subsets: ['latin'], variable: '--font-sans' })
 
 const poppins = Poppins({
   variable: '--font-poppins',
@@ -34,18 +35,36 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      className={cn("flex", "h-full", "flex-col", "antialiased", roboto.variable, poppins.variable, "font-sans", outfit.variable, robotoHeading.variable)}
+      className={cn(
+        'flex',
+        'h-full',
+        'flex-col',
+        'antialiased',
+        roboto.variable,
+        poppins.variable,
+        'font-sans',
+        outfit.variable,
+        robotoHeading.variable
+      )}
       lang="pt-BR"
       suppressHydrationWarning
     >
-      <body className="relative min-h-screen w-full font-poppins">
-        <Image
-          alt="Image de fundo"
-          className="absolute inset-0 -z-10 object-cover"
-          src={Bg}
-        />
+      <body
+        className="relative min-h-screen w-full font-poppins"
+        suppressHydrationWarning
+      >
+        <div className="absolute top-0 -z-10 h-screen w-full">
+          <Image
+            alt="Image de fundo"
+            className="h-screen w-full bg-no-repeat object-cover"
+            fill
+            src={Bg}
+          />
+        </div>
         <Header />
         <main>{children}</main>
+
+        <Footer />
       </body>
     </html>
   )

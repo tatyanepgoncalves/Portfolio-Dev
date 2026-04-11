@@ -5,6 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-footer: hwb(265 34% 14% / 0.05);
   --color-background: #1a0b2e;
   --color-foreground: #b8c8da;
   --color-primary: #cd5aed;
@@ -22,9 +23,6 @@
   --color-button-primary: #e9c176;
 
   --color-cta-line: rgba(233, 193, 118, 30%);
-
-  --color-footer: rgba(253, 230, 138, 20%);
-  --color-footer-link: rgba(216, 180, 254, 50%);
 
   --font-space-grotesk: "Space Grotesk", sans-serif;
   --font-poppins: "Poppins", sans-serif;
@@ -188,4 +186,9 @@
   html {
     @apply font-sans;
   }
+}
+
+/* No seu globals.css */
+.swiper-wrapper {
+  transition-timing-function: linear !important;
 }

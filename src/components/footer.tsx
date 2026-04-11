@@ -1,44 +1,19 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import ImageFooter from '@/images/Mountain_Horizon.svg'
+import CTA from './cta'
 
 export default function Footer() {
+  const year = new Date().getFullYear()
+
   return (
-    <footer className="flex h-100 flex-col items-center justify-center py-4">
-      <picture className="h-20">
-        <Image
-          alt="Image ilustrativa de montanhas"
-          className="h-full w-full object-cover"
-          src={ImageFooter}
-        />
-      </picture>
+    <div>
+      <CTA />
 
-      <section className="space-y-2">
-        <div className="text-center">
-          <h1 className="font-bold font-noto-serif text-4xl text-footer">
-            T.G.
-          </h1>
+      <footer className="bg-footer py-10 text-white">
+        <div className="container mx-auto px-4">
+          <p className="text-center font-poppins text-xs text-zinc-200 tracking-[1.5px]">
+            &copy; {year} T.G. All rights reserved.
+          </p>
         </div>
-
-        <div className="space-x-8">
-          <Link
-            className="font-noto-serif text-footer-link text-xs uppercase tracking-[1.2px]"
-            href="https://github.com/tatyanepgoncalves"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            GitHub
-          </Link>
-          <Link
-            className="font-noto-serif text-footer-link text-xs uppercase tracking-[1.2px]"
-            href="https://www.linkedin.com/in/tatyanegoncalves/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Linkedin
-          </Link>
-        </div>
-      </section>
-    </footer>
+      </footer>
+    </div>
   )
 }
